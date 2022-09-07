@@ -1,0 +1,3 @@
+[submodule "copc-rs"]
+	path = copc-rs
+	url = https://github.com/pka/copc-rs
