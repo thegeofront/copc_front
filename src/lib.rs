@@ -26,9 +26,11 @@ mod tests {
         let vec = fs::read("samples/autzen-classified.copc.laz").unwrap();
         let copc2 = Copc::new_from_buffer(vec);
         
-        assert_eq!(copc.get_header().number_of_points(), copc2.get_number_of_points());
+
+        println!("number of points: {}", copc.get_header().number_of_points());
+        assert_eq!(copc.get_header().number_of_points(), copc2.get_point_count());
         assert_eq!(format!("{:?}", copc.get_header()), format!("{:?}", copc2.get_header()));
 
-        
+
     }
 }
